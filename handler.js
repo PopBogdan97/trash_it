@@ -6,7 +6,7 @@ module.exports.hello = async (event, context) => {
   var body = JSON.parse(event.body)
   console.log(body);
 
-  var tMaterial = body.queryResult.parameters.waste;
+  var tMaterial = body.queryResult.parameters.original;
 
   return {
     statusCode: 200,
