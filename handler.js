@@ -4,15 +4,10 @@ const { getBin } = require("db")
 module.exports.hello = async (event, context) => {
 
   var body = JSON.parse(event.body)
-  console.log("\n\n\ PORCO DIO \n\n\n\n\n\n\n");
   console.log(body);
 
+  var tMaterial = body.queryResult.parameters.waste;
 
-  var par = body.queryResult.parameters;
-  var tMaterial = par.Tmaterial;
-  var tObject = par.Tobject;
-
-  console.log("ITEM" + tObject)
   return {
     statusCode: 200,
     body: JSON.stringify({
